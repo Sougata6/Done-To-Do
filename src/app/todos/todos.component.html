@@ -1,0 +1,5 @@
+<div [class]="containerClass" *ngFor="let todo of todos; index as i">
+    <div [class] = "todosClass" ><h3>{{i+1+". "}}{{todo.title+":"}}</h3><p><br>{{todo.desc}}</p></div>
+    <input [class]="deleteButton" type="button" value="Delete" (click)="deleteTodo(i)">
+</div>
+<!--<input [class]="saveButton" type="button" value="Save" (click)="saveTodos()">-->

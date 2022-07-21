@@ -1,0 +1,10 @@
+.paragraph {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(170, 161, 219);
+    background-color: black;
+    font-style: italic;
+}

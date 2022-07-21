@@ -1,0 +1,35 @@
+.todos {
+    display: flex;
+    padding: 2px;
+    border: 2px solid rgb(24, 79, 95);
+    background-color: black;
+    min-width: 800px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 6px;
+    box-shadow: 6px 6px 3px 0px whitesmoke;
+}
+.deleteButton{
+    display: flex;
+    background-color: rgb(19, 163, 115);
+    box-shadow: 6px 6px 3px 0px whitesmoke;
+    justify-content: flex-end;
+    margin: 5px;
+}
+.saveButton{
+    display: flex;
+    background-color: rgb(19, 163, 115);
+    box-shadow: 6px 6px 3px 0px whitesmoke;
+    justify-content: center;
+    margin: 5px;
+}
+
+.todoContainer{
+    display: flex;
+    color: aquamarine;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: baseline;
+    
+}
