@@ -3,7 +3,7 @@
         <p>Enter What to do:</p>
         <input type="text" placeholder="ToDo Title" #todoTitle> <br>
     
-        <input type="text" placeholder="ToDo description" #todoDesc [(ngModel)]="twoWayBind">
+        <input type="text" placeholder="ToDo description(0-100)" #todoDesc [(ngModel)]="twoWayBind">
         {{twoWayBind}} <br>
         <input type="button" value="Add ToDo" (click)="addTodo(todoTitle,todoDesc)"><br>
     </div> 

@@ -10,8 +10,8 @@ export class TodoFormComponent implements OnInit {
   public formClass = "form";
   //public todoTitle = "todoTitle";
   public twoWayBind = "";
-  public displayToDo = true;
-  public todos:any = [];
+  //public displayToDo = true;
+  public todos:any = JSON.parse(localStorage.getItem('todos')||'[]');
   public todo:any;
   /*public myTodo = {
     title:"",
@@ -26,16 +26,17 @@ export class TodoFormComponent implements OnInit {
   addTodo(todoTitle:any, todoDesc:any){
     let title = todoTitle.value;
     let desc = todoDesc.value;
-    if(title){
+    if(title && desc){
       //this.myTodo.title = title;
       //this.myTodo.desc = desc;
       let myTodo = {
-        title:"",
-        desc:""
+        "title":title,
+        "desc":desc
       }
-      myTodo.title = todoTitle.value;
-      myTodo.desc = todoDesc.value;
+      //myTodo.title = todoTitle.value;
+      //myTodo.desc = todoDesc.value;
       this.todos.push(myTodo);
+      localStorage.setItem('todos',JSON.stringify(this.todos));
       console.log(this.todos);
 
     }

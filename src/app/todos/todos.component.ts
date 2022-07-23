@@ -25,10 +25,11 @@ export class TodosComponent implements OnInit {
     //this.deleteEvent.emit(todo);
     //console.log(i);
     this.todos.splice(i,1);
+    localStorage.setItem('todos',JSON.stringify(this.todos));
     console.log(this.todos);
   }
-  saveTodos(){
+  /*saveTodos(){
     localStorage.setItem("myTodos",JSON.stringify(this.todos));
     this.savedTodos = JSON.parse(localStorage.getItem("myTodos")||"{}");
-  }
+  }*/
 }
