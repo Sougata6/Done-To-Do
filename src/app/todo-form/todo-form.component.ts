@@ -26,7 +26,7 @@ export class TodoFormComponent implements OnInit {
   addTodo(todoTitle:any, todoDesc:any){
     let title = todoTitle.value;
     let desc = todoDesc.value;
-    if(title && desc){
+    if(title && desc.length<=100){
       //this.myTodo.title = title;
       //this.myTodo.desc = desc;
       let myTodo = {
@@ -40,8 +40,11 @@ export class TodoFormComponent implements OnInit {
       console.log(this.todos);
 
     }
-    else {
-      alert("Please fill up the field!");
+    else if(desc.length>100) {
+      alert("Please enter the description within 100 characters!");
+    }
+    else{
+      alert("Please fill up the title field!");
     }
 
   }
